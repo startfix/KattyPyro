@@ -10,8 +10,16 @@
          "manager",
          "Fallen"
       ],   
-   "repository": "https://github.com/Amang1503/AmangRobot",
-   "stack": "heroku-22",
+ "repository": "https://github.com/Amang1503/AmangRobot",
+ "stack": "heroku-22",
+ "addons": [
+    {
+       "options": {
+          "version": "12"
+       },
+       "plan": "heroku-postgresql"
+    }
+ ],
    "env": {
       "API_ID": {
          "description": "Get this value from my.telegram.org/apps.",
