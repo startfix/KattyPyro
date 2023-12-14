@@ -76,7 +76,7 @@ if __name__ == "__main__":
         pass
     except Exception:
         err = traceback.format_exc()
-        LOGGER.info(err)
+        LOGGER("info").info(err)
     finally:
         loop.stop()
         LOGGER.info("------------------------ Stopped Services ------------------------")
