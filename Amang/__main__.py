@@ -6,6 +6,7 @@ Copyright (c) 2023 Kynan | TheHamkerCat
 import asyncio
 import importlib
 import re
+import traceback
 from contextlib import closing, suppress
 
 from pyrogram import idle
