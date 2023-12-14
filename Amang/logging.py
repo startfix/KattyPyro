@@ -15,23 +15,24 @@ logging.basicConfig(
         ),
         logging.StreamHandler(),
     ],
-)
-"""
+)"""
 
 basicConfig(
+# Konfigurasi handler konsol
     level=INFO,
     format="%(filename)s:%(lineno)s %(levelname)s: %(message)s",
     datefmt="%m-%d %H:%M",
     handlers=[RichHandler()],
 )
 console = StreamHandler()
-console.setLevel(ERROR)
+console.setLevel(logging.ERROR)
 console.setFormatter(Formatter("%(filename)s:%(lineno)s %(levelname)s: %(message)s"))
-getLogger("").addHandler(console)
+logging.getLogger("").addHandler(console)
 
+# Set level untuk beberapa logger tertentu
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("pytgcalls").setLevel(logging.ERROR)
 
-
+# Fungsi untuk mendapatkan logger
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
