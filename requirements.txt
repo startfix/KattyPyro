@@ -39,5 +39,6 @@ wget
 youtube-search-python
 yt-dlp
 regex
+rich
 Telethon==1.*
 TgCrypto
